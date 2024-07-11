@@ -1,13 +1,13 @@
 {
   "name": "api_task_management",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/erivaldocazinga22/api_task_management",
   "author": "erivaldocazinga22 <cazarthdesogner@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --env-file .env index.js",
-    "start": "node --env-file .env index.js"
+    "dev": "nodemon --env-file .env src/server.js",
+    "start": "node --env-file .env src/server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
