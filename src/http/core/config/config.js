@@ -10,9 +10,10 @@ module.exports = {
     storage: ":memory:"
   },
   production: {
-    dialect: "sqlite",
+    host: process.env.TASK_HOST,
+    dialect: process.env.TASK_DIALET,
     protocol: "sqlite",
-    storage: "./src/http/core/db/database.sqlite",
+    storage: process.env.TASK_PATH,
     dialectOptions: {
       ssl: {
           require: true,
