@@ -2,7 +2,7 @@ module.exports = {
   development: {
     host: "127.0.0.1",
     dialect: "sqlite",
-    storage: "./src/http/core/db/database.db"
+    storage: "./src/http/core/db/database.sqlite"
   },
   test: {
     host: "127.0.0.1",
@@ -10,8 +10,14 @@ module.exports = {
     storage: ":memory:"
   },
   production: {
-    host: "127.0.0.1",
     dialect: "sqlite",
-    storage: "./src/http/core/db/database.db"
+    protocol: "sqlite",
+    storage: "./src/http/core/db/database.sqlite",
+    dialectOptions: {
+      ssl: {
+          require: true,
+          rejectUnauthorized: false // Use false apenas se você confia na rede
+      }
+  }
   }
 }
