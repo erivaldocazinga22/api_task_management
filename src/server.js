@@ -8,7 +8,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/api", router);
-server.use("/", express.static(path.join(__dirname, "view")));
+//server.use("/", express.static(path.join(__dirname, "view")));
 
 const { PORT = 5173 } = process.env;
 
